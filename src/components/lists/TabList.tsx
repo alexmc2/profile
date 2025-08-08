@@ -1,3 +1,4 @@
+// Uncomment this component when ready to use
 // 'use client';
 // import useWindowWidth from '@/lib/hooks/use-window-width';
 // import { ExperienceType } from '@/lib/types';
@@ -78,3 +79,7 @@
 // };
 
 // export default TabList;
+
+// Placeholder export to satisfy TypeScript and index.ts re-export
+const TabList = () => null;
+export default TabList;

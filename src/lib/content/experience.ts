@@ -1,3 +1,4 @@
+// Uncomment this data when ready to use
 // import { ExperienceSectionType } from '@/lib/types/sections';
 
 // export const experienceSection: ExperienceSectionType = {
@@ -54,3 +55,6 @@
 //     },
 //   ],
 // };
+
+// Placeholder export to satisfy TypeScript
+export {};

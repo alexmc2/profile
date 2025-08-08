@@ -11,10 +11,7 @@ export const socialSection: SocialSectionType = {
       icon: 'mdi:instagram',
       url: socialLinks.instagram,
     },
-    {
-      icon: 'lucide:twitter',
-      url: socialLinks.twitter,
-    },
+
     {
       icon: 'lucide:linkedin',
       url: socialLinks.linkedin,

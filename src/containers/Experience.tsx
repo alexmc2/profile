@@ -1,3 +1,4 @@
+// Uncomment this component when ready to use
 // 'use client';
 // import { TabList } from '@/components';
 
@@ -19,3 +20,7 @@
 // };
 
 // export default Experience;
+
+// Placeholder export to satisfy TypeScript and index.ts re-export
+const Experience = () => null;
+export default Experience;

@@ -1,3 +1,4 @@
+// Uncomment this component when ready to use
 // 'use client';
 
 // import featuredProjectsSection from '@/lib/content/featured-projects';
@@ -34,3 +35,7 @@
 // };
 
 // export default FeaturedProjects;
+
+// Placeholder export to satisfy TypeScript and index.ts re-export
+const FeaturedProjects = () => null;
+export default FeaturedProjects;

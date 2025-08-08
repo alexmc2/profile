@@ -1,3 +1,4 @@
+// Uncomment this data when ready to use
 // import { FeaturedProjectsSectionType } from '@/lib/types/sections';
 
 // const featuredProjectsSection: FeaturedProjectsSectionType = {
@@ -66,3 +67,6 @@
 // };
 
 // export default featuredProjectsSection;
+
+// Placeholder export to satisfy TypeScript
+export {};
