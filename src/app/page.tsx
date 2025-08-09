@@ -1,5 +1,6 @@
 import {
   About,
+  CogAnimation,
   Contact,
   Experience,
   FeaturedProjects,
@@ -16,12 +17,14 @@ const Home: NextPage = () => {
     <>
       <Layout>
         <Hero />
+
         <About />
         <Skills />
         {/* <Experience /> */}
         {/* <FeaturedProjects /> */}
         <Projects />
         <Contact />
+        <CogAnimation />
       </Layout>
     </>
   );

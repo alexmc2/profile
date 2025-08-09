@@ -46,7 +46,9 @@ const ProjectCard = ({
         </div>
         <div className="p-4 py-3 space-y-1">
           <div className="flex items-center justify-between">
-            <p className="font-mono text-xs capitalize">{tags.join(' | ')}</p>
+            <p className="font-poppins text-xs capitalize">
+              {tags.join(' | ')}
+            </p>
             <div className="flex items-center space-x-1.5">
               <a
                 href={repo}

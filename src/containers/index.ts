@@ -1,4 +1,5 @@
 export { default as About } from './About';
+export { default as CogAnimation } from './CogAnimation';
 export { default as Contact } from './Contact';
 export { default as Email } from './Email';
 export { default as Experience } from './Experience';

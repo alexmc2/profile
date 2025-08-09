@@ -64,7 +64,7 @@ const FeaturedProject = ({
           )}
         >
           <div>
-            <div className="font-mono hidden lg:block text-accent capitalize text-xs lg:mb-2.5">
+            <div className="font-poppins hidden lg:block text-accent capitalize text-xs lg:mb-2.5">
               featured project
             </div>
             <h2 className="heading-tertiary !text-white lg:!text-dark-2 !font-semibold lg:!font-normal !normal-case">
@@ -86,7 +86,7 @@ const FeaturedProject = ({
               )}
             >
               <p className="text-dark-1">{description}</p>
-              <div className="hidden my-3 font-mono text-xs capitalize lg:block text-accent lg:my-2 lg:mt-3">
+              <div className="hidden my-3 font-poppins text-xs capitalize lg:block text-accent lg:my-2 lg:mt-3">
                 tasks / achievements
               </div>
               <div className="hidden text-base lg:block lg:text-sm">
@@ -97,7 +97,7 @@ const FeaturedProject = ({
 
           <p
             className={cn(
-              'font-mono text-[10px] text-accent lg:text-accent lg:text-xs justify-center capitalize flex flex-wrap gap-2 lg:gap-x-5 items-center lg:justify-end',
+              'font-poppins text-[10px] text-accent lg:text-accent lg:text-xs justify-center capitalize flex flex-wrap gap-2 lg:gap-x-5 items-center lg:justify-end',
               align === 'left' && 'lg:justify-start'
             )}
           >
@@ -159,7 +159,7 @@ const FeaturedProject = ({
 
         <div className={cn('bg-bg-secondary p-5 space-y-2')}>
           <div>
-            {/* <div className="font-mono text-accent capitalize text-xs lg:mb-2.5">
+            {/* <div className="font-poppins text-accent capitalize text-xs lg:mb-2.5">
               featured project
             </div> */}
             <h2 className="heading-tertiary !text-white !font-semibold !normal-case">
@@ -175,7 +175,7 @@ const FeaturedProject = ({
 
           <div className={cn('text-dark-1 space-y-2 text-sm')}>
             <p className="text-base text-dark-1">{description}</p>
-            <div className="hidden my-3 font-mono text-xs capitalize lg:block text-accent lg:my-2 lg:mt-3">
+            <div className="hidden my-3 font-poppins text-xs capitalize lg:block text-accent lg:my-2 lg:mt-3">
               tasks / achievements
             </div>
             <div className="mb-2 space-y-1">
@@ -187,7 +187,7 @@ const FeaturedProject = ({
 
           <p
             className={cn(
-              'font-mono text-[10px] text-accent lg:text-accent lg:text-xs justify-center capitalize flex flex-wrap gap-2 lg:gap-x-5 items-center lg:justify-end',
+              'font-poppins text-[10px] text-accent lg:text-accent lg:text-xs justify-center capitalize flex flex-wrap gap-2 lg:gap-x-5 items-center lg:justify-end',
               align === 'left' && 'lg:justify-start'
             )}
           >
