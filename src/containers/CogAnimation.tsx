@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import ShowLottie from '../components/ui/ShowLottie';
+import { DynamicShowLottie } from '../components/dynamic/Dynamic';
 import cogAnimation from '../../public/lotties/cog.json';
 
 const CogAnimation = () => {
@@ -11,7 +11,7 @@ const CogAnimation = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 2.5 }}
       >
-        <ShowLottie path={cogAnimation} className="max-w-[160px] md:max-w-[300px]" />
+        <DynamicShowLottie path={cogAnimation} className="max-w-[160px] md:max-w-[300px]" />
       </motion.div>
     </div>
   );
