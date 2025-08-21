@@ -20,11 +20,12 @@ const About = () => {
       <h2 className="heading-secondary">{title}</h2>
       <main className="flex flex-col items-center gap-16 lg:items-start lg:flex-row">
         <div className="space-y-4 lg:w-3/5">
-          <p>Hi, my name is Alex McGarry.</p>
+          <p>Hi, I'm Alex McGarry - a junior developer passionate about building practical web applications.</p>
           <p>
-            I'm a Full-Stack web developer with experience in building web
-            applications using React.js & Next.js with TypeScript, TailwindCSS,
-            and Supabase.
+            After completing the Northcoders bootcamp in 2023, I've been developing my skills through personal projects. I enjoy working with modern technologies like Next.js, React, and TypeScript to create solutions for real-world problems.
+          </p>
+          <p>
+            I'm currently building Co-op Connect, a comprehensive management platform, which has been a great learning experience in working with complex database relationships and user authentication. I'm always eager to take on new challenges and learn emerging technologies.
           </p>
 
           {list && (

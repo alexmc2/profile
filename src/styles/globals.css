@@ -31,7 +31,8 @@
   /* Dark Theme */
   .dark {
     /* --color-bg: theme(colors.blue.950); */
-    --color-bg: #00022b;
+    /* --color-bg: #00022b; */
+    --color-bg: theme(colors.slate.950);
     --color-bg-secondary: theme(colors.slate.800);
     --color-accent: theme(colors.sky.400);
     --color-accent-light: theme(colors.sky.400/0.1);

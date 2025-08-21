@@ -4,7 +4,7 @@ import { PROJECTS_INITIALLY } from '@/lib/utils/config';
 import { sortByYear } from '@/lib/utils/helper';
 
 import { Button, ProjectCard, Wrapper } from '../components';
-import { getSectionAnimation, projectVariants } from '../styles/animations';
+import { getSectionAnimation } from '../styles/animations';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -20,34 +20,17 @@ const Projects = () => {
       <motion.h2 className="heading-secondary text-center !mb-12">
         {title}
       </motion.h2>
-      <div className="grid gap-6 grid-cols-auto-250 xs:grid-cols-auto-300 place-items-center">
-        {sortByYear(visibleProjects).map((project, i) => {
-          if (i < PROJECTS_INITIALLY) {
-            return (
-              <ProjectCard
-                {...project}
-                key={project.id}
-                variants={projectVariants}
-                initial="hidden"
-                whileInView="show"
-                custom={i}
-                viewport={{ once: true }}
-              />
-            );
-          }
-
-          return (
-            <ProjectCard
-              {...project}
-              key={project.id}
-              variants={projectVariants}
-              initial="hidden"
-              animate="show"
-              custom={i - PROJECTS_INITIALLY}
-            />
-          );
-        })}
+      
+      {/* Container to match About section centering */}
+      <div className="max-w-screen-lg mx-auto space-y-14">
+        {sortByYear(visibleProjects).map((project, i) => (
+          <ProjectCard
+            {...project}
+            key={project.id}
+          />
+        ))}
       </div>
+
       {projects.length > PROJECTS_INITIALLY && (
         <Button
           size="lg"

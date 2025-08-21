@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         {/* <FeaturedProjects /> */}
         <Projects />
         <Contact />
-        <CogAnimation />
+        {/* <CogAnimation /> */}
       </Layout>
     </>
   );

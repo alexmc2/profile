@@ -29,9 +29,10 @@ export type ProjectType = {
   name: string;
   url: string;
   year: number;
-  img: string;
+  img: string | { light: string; dark: string };
   tags: string[];
   repo: string;
+  description?: string;
 };
 
 export interface FeaturedProjectType

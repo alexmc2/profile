@@ -95,13 +95,13 @@ const Navbar = () => {
       className="fixed inset-x-0 top-0 right-0 z-50 flex items-end justify-between px-8 py-4 duration-500 md:px-6 xl:px-12 backdrop-blur-lg"
     >
       <Link href="/" className="relative z-10">
-        <img 
-          src="/images/alex.jpg" 
-          alt="Alex McGarry" 
+        <img
+          src="/images/alex.jpg"
+          alt="Alex McGarry"
           className="w-12 h-12 rounded-full object-cover border-2 border-accent hover:border-accent-light transition-all duration-300 hover:scale-110"
         />
       </Link>
-      
+
       {/* <h1 className="relative text-2xl capitalize font-signature text-accent group top-1">
         <Link href="/#hero" className="block">
           {author.name}

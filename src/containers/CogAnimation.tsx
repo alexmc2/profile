@@ -11,7 +11,7 @@ const CogAnimation = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 2.5 }}
       >
-        <DynamicShowLottie path={cogAnimation} className="max-w-[160px] md:max-w-[300px]" />
+        <DynamicShowLottie path={cogAnimation} className="max-w-[80px] md:max-w-[120px]" />
       </motion.div>
     </div>
   );

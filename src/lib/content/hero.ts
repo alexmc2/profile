@@ -4,8 +4,8 @@ import { HeroSectionType } from '@/lib/types/sections';
 export const heroSection: HeroSectionType = {
   subtitle: "Hi, my name's",
   title: 'Alex McGarry',
-  tagline: 'I develop web applications and websites',
+  tagline: 'I build web applications and websites',
   description:
-    "I'm a Full-Stack web developer with experience in building web applications using React.js & Next.js with TypeScript, TailwindCSS, and Supabase.",
+    "Junior full-stack developer with a focus on Next.js and React. I'm passionate about creating practical solutions and continuously learning new technologies.",
   specialText: 'Currently available for freelance work',
 };

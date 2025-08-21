@@ -1,6 +1,6 @@
 'use client';
 import { ProjectType } from '@/lib/types';
-// import { blurImageURL } from '@/lib/utils/config';
+import { useTheme } from '@/lib/hooks/use-theme';
 
 import { Icon } from '@iconify/react';
 import { motion, MotionProps } from 'framer-motion';
@@ -14,64 +14,132 @@ const ProjectCard = ({
   year,
   img,
   tags,
+  description,
   ...rest
 }: ProjectType & MotionProps) => {
   // To avoid hydration failed error
   const [domLoaded, setDomLoaded] = useState(false);
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     setDomLoaded(true);
   }, []);
 
+  // Determine which image to use
+  const imageUrl =
+    typeof img === 'string' ? img : isDarkMode ? img.dark : img.light;
+
+  const imageVariants = {
+    hidden: { opacity: 0, x: -150, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut' as const,
+        type: 'spring' as const,
+        damping: 20,
+      },
+    },
+  };
+
+  const contentVariants = {
+    hidden: { opacity: 0, x: 150, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.8,
+        ease: 'easeOut' as const,
+        delay: 0.1,
+        type: 'spring' as const,
+        damping: 20,
+      },
+    },
+  };
+
   return domLoaded ? (
-    <motion.div {...rest} className="w-full max-w-[350px]">
-      <button
-        onClick={(e) => {
-          // Don't run this if the clicked target is an anchor element
-          if ((e.target as HTMLElement).closest('a')) return;
-          window.open(url);
-        }}
-        className="block w-full overflow-hidden transition-all duration-200 rounded-md shadow-xl group bg-bg-secondary dark:shadow-2xl"
-      >
-        <div className="overflow-hidden h-[200px]">
-          <Image
-            src={img}
-            alt={name}
-            width={300}
-            height={300}
-            placeholder="blur"
-            // blurDataURL={blurImageURL}
-            className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110 group-focus:scale-110"
-          />
-        </div>
-        <div className="p-4 py-3 space-y-1">
-          <div className="flex items-center justify-between">
-            <p className="font-poppins text-xs capitalize">
-              {tags.join(' | ')}
-            </p>
-            <div className="flex items-center space-x-1.5">
-              <a
-                href={repo}
-                className="block duration-200 hover:text-accent"
-                target="_blank"
-              >
-                <Icon icon="tabler:brand-github" width={20} height={20} />
-              </a>
-              <a
-                href={url}
-                className="block duration-200 hover:text-accent"
-                target="_blank"
-              >
-                <Icon icon="ci:external-link" width={22} height={22} />
-              </a>
+    <motion.div
+      {...rest}
+      className="max-w-5xl mx-auto"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, margin: '-100px' }}
+    >
+      <div className="flex flex-col lg:flex-row lg:items-stretch bg-bg-secondary dark:bg-gray-800/80 rounded-2xl overflow-hidden group transition-all duration-500 shadow-[0_20px_60px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-0">
+        {/* Image Section - Left Box */}
+        <motion.div
+          variants={imageVariants}
+          className="lg:flex-shrink-0 relative"
+        >
+          <div className="lg:rounded-r-none relative">
+            <Image
+              src={imageUrl}
+              alt={name}
+              width={500}
+              height={400}
+              className="w-auto h-64 lg:h-80 object-contain transition-all duration-500 group-hover:scale-105 rounded-xl shadow-[0_16px_50px_rgba(0,0,0,0.25),0_6px_15px_rgba(0,0,0,0.15)] dark:shadow-none dark:border dark:border-slate-800"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none dark:block hidden rounded-xl"></div>
+          </div>
+        </motion.div>
+
+        {/* Content Section - Right Box */}
+        <motion.div variants={contentVariants} className="lg:flex-1">
+          <div className="p-6 lg:p-8 h-64 lg:h-80 flex flex-col justify-center">
+            <div className="space-y-4 lg:space-y-6">
+              <div className="flex items-start justify-between gap-4">
+                <h3 className="text-lg lg:text-xl font-bold text-text-primary dark:text-white hover:text-accent transition-colors duration-300 leading-tight">
+                  {name}
+                </h3>
+                <span className="text-xs text-text-secondary bg-accent/10 px-2 py-1 rounded-full shrink-0">
+                  {year}
+                </span>
+              </div>
+
+              {description && (
+                <p className="text-text-secondary dark:text-slate-300 leading-relaxed text-sm">
+                  {description}
+                </p>
+              )}
+
+              <div className="flex flex-wrap gap-1.5">
+                {tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className="text-xs px-2 py-1 bg-accent/20 text-accent rounded-full font-medium hover:bg-accent/30 transition-colors duration-300"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              <div className="flex items-center space-x-3 pt-2">
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-accent hover:bg-accent/80 text-white px-3 py-2 rounded-lg text-sm transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 shadow-lg hover:shadow-accent/25"
+                >
+                  <span className="font-medium">View Project</span>
+                  <Icon icon="ci:external-link" width={14} height={14} />
+                </a>
+                <a
+                  href={repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 border border-text-secondary hover:border-accent hover:text-accent px-3 py-2 rounded-lg text-sm transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+                >
+                  <span className="font-medium">Code</span>
+                  <Icon icon="tabler:brand-github" width={14} height={14} />
+                </a>
+              </div>
             </div>
           </div>
-          <h4 className="flex justify-between font-medium capitalize duration-200 group-hover:text-accent">
-            <span>{name}</span>
-            <span className="mr-1">{year}</span>
-          </h4>
-        </div>
-      </button>
+        </motion.div>
+      </div>
     </motion.div>
   ) : (
     <></>
