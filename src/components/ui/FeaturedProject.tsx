@@ -1,6 +1,7 @@
 import { FeaturedProjectType } from '@/lib/types';
 import { blurImageURL } from '@/lib/utils/config';
 import { cn } from '@/lib/utils/helper';
+import { useTheme } from '@/lib/hooks/use-theme';
 
 import { Icon } from '@iconify/react';
 import { motion, MotionProps } from 'framer-motion';
@@ -22,6 +23,8 @@ const FeaturedProject = ({
   align = 'left',
   ...rest
 }: Props) => {
+  const { isDarkMode } = useTheme();
+  const imageSrc = typeof img === 'string' ? img : isDarkMode ? img.dark : img.light;
   return (
     <>
       <motion.div
@@ -39,7 +42,7 @@ const FeaturedProject = ({
           )}
         >
           <Image
-            src={img}
+            src={imageSrc}
             alt={name}
             width={720}
             height={480}
@@ -142,7 +145,7 @@ const FeaturedProject = ({
         {/* Image Header */}
         <header className={cn('w-full')}>
           <Image
-            src={img}
+            src={imageSrc}
             alt={name}
             width={720}
             height={480}

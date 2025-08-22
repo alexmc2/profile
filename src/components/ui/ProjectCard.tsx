@@ -68,7 +68,8 @@ const ProjectCard = ({
       whileInView="visible"
       viewport={{ once: true, margin: '-100px' }}
     >
-      <div className="flex flex-col lg:flex-row lg:items-stretch bg-bg-secondary dark:bg-gray-800/80 rounded-2xl overflow-hidden group transition-all duration-500 shadow-[0_20px_60px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-0">
+      {/* Desktop Layout - Unchanged */}
+      <div className="hidden lg:flex flex-row lg:items-stretch bg-bg-secondary dark:bg-gray-800/80 rounded-2xl overflow-hidden group transition-all duration-500 shadow-[0_20px_60px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-0">
         {/* Image Section - Left Box */}
         <motion.div
           variants={imageVariants}
@@ -136,6 +137,79 @@ const ProjectCard = ({
                   <Icon icon="tabler:brand-github" width={14} height={14} />
                 </a>
               </div>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Mobile Layout - New Vertical Stack */}
+      <div className="lg:hidden flex flex-col bg-bg-secondary dark:bg-gray-800/90 transition-all duration-500 shadow-lg dark:shadow-2xl">
+        {/* Mobile Image Section */}
+        <motion.div
+          variants={imageVariants}
+          className="relative w-full overflow-hidden"
+        >
+          <Image
+            src={imageUrl}
+            alt={name}
+            width={800}
+            height={400}
+            className="w-full h-auto"
+          />
+        </motion.div>
+
+        {/* Mobile Content Section */}
+        <motion.div variants={contentVariants} className="px-8 py-6">
+          <div className="space-y-4">
+            {/* Title and Year */}
+            <div className="flex items-start justify-between gap-3">
+              <h3 className="text-xl font-bold text-text-primary dark:text-white leading-tight">
+                {name}
+              </h3>
+              <span className="text-xs text-text-secondary dark:text-gray-400 shrink-0 mt-1">
+                {year}
+              </span>
+            </div>
+
+            {/* Description */}
+            {description && (
+              <p className="text-text-secondary dark:text-gray-300 text-sm leading-relaxed">
+                {description}
+              </p>
+            )}
+
+            {/* Tags */}
+            <div className="flex flex-wrap gap-2">
+              {tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="text-xs px-2.5 py-1 bg-accent/10 text-accent font-medium"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex gap-3 pt-2">
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 bg-accent hover:bg-accent/90 text-white px-4 py-2.5 text-sm font-medium transition-all duration-300"
+              >
+                <span>View Project</span>
+                <Icon icon="ci:external-link" width={16} height={16} />
+              </a>
+              <a
+                href={repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-600 text-text-primary dark:text-white hover:border-accent hover:text-accent dark:hover:text-accent px-4 py-2.5 text-sm font-medium transition-all duration-300"
+              >
+                <span>Code</span>
+                <Icon icon="tabler:brand-github" width={18} height={18} />
+              </a>
             </div>
           </div>
         </motion.div>
