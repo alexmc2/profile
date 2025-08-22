@@ -5,6 +5,7 @@ import fontVariables from '@/lib/utils/fonts';
 import '../styles/globals.css';
 import Cursor from '../components/ui/Cursor';
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata: Metadata = {
   title: seoData.title,
@@ -98,7 +99,10 @@ export default function RootLayout({
           }}
         />
         <Cursor className="hidden dark:lg:block" />
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );
