@@ -1,3 +1,4 @@
+// src/containers/layout/Footer.tsx
 import { footerSection } from '@/lib/content/footer';
 
 import SocialLinks from '../Social/SocialLinks';

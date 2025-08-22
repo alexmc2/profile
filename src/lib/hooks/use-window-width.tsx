@@ -1,3 +1,4 @@
+// src/lib/hooks/use-window-width.tsx
 import { useEffect, useState } from 'react';
 
 const useWindowWidth = () => {

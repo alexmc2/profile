@@ -1,3 +1,4 @@
+// src/components/ui/Sidebar.tsx
 'use client';
 import { fadeIn } from '../../styles/animations';
 import { motion } from 'framer-motion';

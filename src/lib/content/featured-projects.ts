@@ -1,3 +1,4 @@
+// src/lib/content/featured-projects.ts
 // Uncomment this data when ready to use
 // import { FeaturedProjectsSectionType } from '@/lib/types/sections';
 

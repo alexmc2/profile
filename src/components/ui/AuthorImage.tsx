@@ -1,3 +1,4 @@
+// src/components/ui/AuthorImage.tsx
 import Image from 'next/image';
 
 type Props = { src: string; alt: string };

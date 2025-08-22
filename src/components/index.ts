@@ -1,3 +1,4 @@
+// src/components/index.ts
 'use client';
 
 export { default as Button } from './buttons/Button';

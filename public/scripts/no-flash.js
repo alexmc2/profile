@@ -1,3 +1,4 @@
+// public/scripts/no-flash.js
 // IIFE - To avoid flash of default theme: light
 (function () {
   const darkMode = localStorage.getItem('darkMode');

@@ -1,3 +1,4 @@
+// src/containers/layout/Layout.tsx
 import { Email, Footer, Navbar, Social } from '@/containers';
 
 type Props = {

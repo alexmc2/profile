@@ -1,3 +1,4 @@
+// src/containers/Social/index.tsx
 import { Sidebar } from '../../../src/components';
 import SocialLinks from './SocialLinks';
 

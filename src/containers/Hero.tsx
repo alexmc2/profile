@@ -1,3 +1,4 @@
+// src/containers/Hero.tsx
 'use client';
 import { heroSection } from '@/lib/content/hero';
 import useWindowWidth from '@/lib/hooks/use-window-width';

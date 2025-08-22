@@ -1,3 +1,4 @@
+// src/components/ui/ShowLottie.tsx
 'use client';
 import { Player } from '@lottiefiles/react-lottie-player';
 

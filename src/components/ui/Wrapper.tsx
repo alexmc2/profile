@@ -1,3 +1,4 @@
+// src/components/ui/Wrapper.tsx
 import { motion, MotionProps } from 'framer-motion';
 import { ElementType, HTMLAttributes, ReactNode } from 'react';
 

@@ -1,3 +1,4 @@
+// src/components/lists/ListItem.tsx
 type Props = { children: React.ReactNode; className?: string };
 
 const ListItem = ({ children, className = '' }: Props) => {

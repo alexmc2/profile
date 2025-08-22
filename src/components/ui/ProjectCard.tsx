@@ -1,3 +1,4 @@
+// src/components/ui/ProjectCard.tsx
 'use client';
 import { ProjectType } from '@/lib/types';
 import { useTheme } from '@/lib/hooks/use-theme';
@@ -69,7 +70,7 @@ const ProjectCard = ({
       viewport={{ once: true, margin: '-100px' }}
     >
       {/* Desktop Layout - Unchanged */}
-      <div className="hidden lg:flex flex-row lg:items-stretch bg-bg-secondary dark:bg-gray-800/80 rounded-2xl overflow-hidden group transition-all duration-500 shadow-[0_20px_60px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.3)] border border-slate-200/50 dark:border-0">
+      <div className="hidden lg:flex flex-row lg:items-stretch bg-bg-secondary dark:bg-gray-800/80 rounded-2xl overflow-hidden group transition-all duration-500 shadow-[0_20px_60px_rgba(0,0,0,0.08),0_8px_20px_rgba(0,0,0,0.06)] dark:shadow-[0_20px_60px_rgba(0,0,0,0.4),0_8px_20px_rgba(0,0,0,0.3)]">
         {/* Image Section - Left Box */}
         <motion.div
           variants={imageVariants}
@@ -81,7 +82,7 @@ const ProjectCard = ({
               alt={name}
               width={500}
               height={400}
-              className="w-auto h-64 lg:h-80 object-contain transition-all duration-500 group-hover:scale-105 rounded-xl shadow-[0_16px_50px_rgba(0,0,0,0.25),0_6px_15px_rgba(0,0,0,0.15)] dark:shadow-none dark:border dark:border-slate-800"
+              className="w-auto h-64 lg:h-80 object-contain transition-all duration-500  rounded-xl shadow-[0_16px_50px_rgba(0,0,0,0.25),0_6px_15px_rgba(0,0,0,0.15)] dark:shadow-none border border-transparent dark:border-slate-800"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none dark:block hidden rounded-xl"></div>
           </div>
@@ -143,7 +144,7 @@ const ProjectCard = ({
       </div>
 
       {/* Mobile Layout - New Vertical Stack */}
-      <div className="lg:hidden flex flex-col bg-bg-secondary dark:bg-gray-800/90 transition-all duration-500 shadow-lg dark:shadow-2xl">
+      <div className="lg:hidden flex flex-col bg-bg-secondary dark:bg-gray-800/90 transition-all duration-500 shadow-lg dark:shadow-2xl rounded-md">
         {/* Mobile Image Section */}
         <motion.div
           variants={imageVariants}

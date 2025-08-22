@@ -1,3 +1,4 @@
+// src/lib/content/projects.ts
 import { ProjectsSectionType } from '@/lib/types/sections';
 export const projectsSection: ProjectsSectionType = {
   title: 'my projects',
@@ -7,20 +8,25 @@ export const projectsSection: ProjectsSectionType = {
       name: 'Co-op Connect Management Platform',
       url: 'https://www.coop-connect.co.uk/',
       repo: 'https://github.com/alexmc2',
-      img: { light: '/images/coop-light.png', dark: '/images/coop-dark.png' },
+      img: { dark: '/images/coop-light.png', light: '/images/coop-dark.png' },
       year: 2024,
       tags: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma'],
-      description: 'Comprehensive management system for housing co-ops with modules for Treasury, Secretary, Garden, and Maintenance. Currently in active development.',
+      description:
+        'Comprehensive management system for housing co-ops with modules for Treasury, Secretary, Garden, and Maintenance. Currently in active development.',
     },
     {
       id: 'brighton-rock',
       name: 'Brighton Rock Housing Co-op',
       url: 'https://www.brighton-rock.org/',
       repo: 'https://github.com/alexmc2/brighton-rock',
-      img: { light: '/images/coop-website-light.png', dark: '/images/coop-website-dark.png' },
+      img: {
+        dark: '/images/coop-website-light.png',
+        light: '/images/coop-website-dark.png',
+      },
       year: 2024,
       tags: ['Next.js', 'React', 'Tailwind CSS'],
-      description: 'Public website for Brighton Rock Housing Co-operative with event listings and member information.',
+      description:
+        'Public website for Brighton Rock Housing Co-operative with event listings and member information.',
     },
     {
       id: 'humidity-advice',
@@ -30,7 +36,8 @@ export const projectsSection: ProjectsSectionType = {
       img: '/images/humidity.png',
       year: 2024,
       tags: ['Next.js', 'MDX', 'PostgreSQL'],
-      description: 'Content site about indoor humidity with articles and interactive calculators. Includes user comments and reviews.',
+      description:
+        'Content site about indoor humidity with articles and interactive calculators. Includes user comments and reviews.',
     },
     {
       id: 'techbay',
@@ -40,7 +47,8 @@ export const projectsSection: ProjectsSectionType = {
       img: '/images/techbay.png',
       year: 2023,
       tags: ['MERN', 'Redux', 'PayPal API'],
-      description: 'E-commerce practice project built while learning the MERN stack. Features product listings and payment integration.',
+      description:
+        'E-commerce practice project built while learning the MERN stack. Features product listings and payment integration.',
     },
     {
       id: 'diet-sunglasses',
@@ -50,7 +58,8 @@ export const projectsSection: ProjectsSectionType = {
       img: '/images/diet-sunglasses.png',
       year: 2024,
       tags: ['Next.js', 'Tailwind CSS', 'Cloudinary'],
-      description: 'Modern photo slideshow with automated playback and smooth wipe transitions. Features intelligent image randomisation and Cloudinary optimisation.',
+      description:
+        'Modern photo slideshow with automated playback and smooth wipe transitions. Features intelligent image randomisation and Cloudinary optimisation.',
     },
   ],
 };

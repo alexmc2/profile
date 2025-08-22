@@ -1,3 +1,4 @@
+// src/lib/content/about.ts
 import { AboutSectionType } from '@/lib/types/sections';
 
 export const aboutSection: AboutSectionType = {

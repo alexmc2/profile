@@ -1,3 +1,4 @@
+// src/lib/content/contact.ts
 import { author } from '@/lib/content/portfolio';
 import { ContactSectionType } from '@/lib/types/sections';
 

@@ -1,3 +1,4 @@
+// src/components/lists/TabList.tsx
 // Uncomment this component when ready to use
 // 'use client';
 // import useWindowWidth from '@/lib/hooks/use-window-width';

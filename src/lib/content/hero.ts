@@ -1,3 +1,4 @@
+// src/lib/content/hero.ts
 import { HeroSectionType } from '@/lib/types/sections';
 // import { resumeFileName } from '@/lib/utils/config';
 

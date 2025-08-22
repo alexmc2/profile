@@ -1,3 +1,4 @@
+// src/lib/content/experience.ts
 // Uncomment this data when ready to use
 // import { ExperienceSectionType } from '@/lib/types/sections';
 

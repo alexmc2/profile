@@ -1,3 +1,4 @@
+// src/lib/utils/config.ts
 export const PROJECTS_INITIALLY = 6;
 
 export const resumeFileName = 'resume.pdf';

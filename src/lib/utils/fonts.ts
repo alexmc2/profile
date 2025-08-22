@@ -1,3 +1,4 @@
+// src/lib/utils/fonts.ts
 import { Inter, Roboto_Mono } from 'next/font/google';
 
 const inter = Inter({

@@ -1,3 +1,4 @@
+// src/components/socials/SocialLink.tsx
 type Props = {
   children: React.ReactNode;
   className?: string;

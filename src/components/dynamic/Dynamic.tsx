@@ -1,3 +1,4 @@
+// src/components/dynamic/Dynamic.tsx
 import dynamic from 'next/dynamic';
 
 export const DynamicShowLottie = dynamic(

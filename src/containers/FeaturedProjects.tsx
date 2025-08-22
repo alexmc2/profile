@@ -1,3 +1,4 @@
+// src/containers/FeaturedProjects.tsx
 // Uncomment this component when ready to use
 // 'use client';
 

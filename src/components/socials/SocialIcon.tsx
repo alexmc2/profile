@@ -1,3 +1,4 @@
+// src/components/socials/SocialIcon.tsx
 import { SocialLinkType } from '@/lib/types';
 
 import SocialLink from './SocialLink';

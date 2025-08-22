@@ -1,3 +1,4 @@
+// src/lib/content/skills.ts
 import { SkillsSectionType } from '@/lib/types/sections';
 
 export const skillsSection: SkillsSectionType = {

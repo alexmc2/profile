@@ -1,3 +1,4 @@
+// src/containers/layout/Navbar.tsx
 'use client';
 import { navbarSection } from '@/lib/content/navbar';
 import { author } from '@/lib/content/portfolio';
@@ -92,13 +93,14 @@ const Navbar = () => {
       initial="hidden"
       animate="show"
       id="navbar"
-      className="fixed inset-x-0 top-0 right-0 z-50 flex items-end justify-between px-8 py-4 duration-500 md:px-6 xl:px-12 backdrop-blur-lg"
+      className="fixed inset-x-0 top-0 z-50 flex items-center justify-between px-4 sm:px-8 py-4 duration-500 md:px-6 xl:px-12 backdrop-blur-lg
+             max-w-[100vw] overflow-x-clip"
     >
-      <Link href="/" className="relative z-10">
+      <Link href="/" className="relative z-10 flex-shrink-0">
         <img
           src="/images/alex.jpg"
           alt="Alex McGarry"
-          className="w-12 h-12 rounded-full object-cover border-2 border-accent hover:border-accent-light transition-all duration-300 hover:scale-110"
+          className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover border-2 border-accent hover:border-accent-light transition-all duration-300 hover:scale-110"
         />
       </Link>
 
@@ -114,11 +116,11 @@ const Navbar = () => {
           setNavbarCollapsed((prev) => !prev);
         }}
         navbarCollapsed={navbarCollapsed}
-        className="md:invisible"
+        className="md:invisible flex-shrink-0"
       />
 
       {(navbarCollapsed || windowWidth > md) && (
-        <nav className="capitalize absolute text-sm duration-200 md:bg-transparent z-50 w-[90%] left-1/2 -translate-x-1/2 top-full h-max rounded-xl shadow-xl p-6 bg-bg-secondary md:blocks md:static md:w-auto md:left-auto md:transform-none md:top-auto md:rounded-none md:shadow-none md:p-0 md:h-auto">
+        <nav className="capitalize absolute text-sm duration-200 md:bg-transparent z-50 w-[90%] left-1/2 -translate-x-1/2 top-full h-max rounded-xl shadow-xl p-6 bg-bg-secondary md:block md:static md:w-auto md:left-auto md:transform-none md:top-auto md:rounded-none md:shadow-none md:p-0 md:h-auto">
           <ul className="flex flex-col items-stretch gap-3 list-style-none lg:gap-5 xl:gap-6 md:flex-row md:items-center">
             {navLinks.map(({ name, url }, i) => (
               <NavItem

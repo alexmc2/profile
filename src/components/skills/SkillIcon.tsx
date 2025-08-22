@@ -1,3 +1,4 @@
+// src/components/skills/SkillIcon.tsx
 import { Icon } from '@iconify/react';
 
 type Props = {

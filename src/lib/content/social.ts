@@ -1,3 +1,4 @@
+// src/lib/content/social.ts
 import { socialLinks } from '@/lib/content/portfolio';
 import { SocialSectionType } from '@/lib/types/sections';
 

@@ -1,3 +1,4 @@
+// src/containers/Email.tsx
 import { author } from '@/lib/content/portfolio';
 
 import { Sidebar, SocialLink } from '../components';

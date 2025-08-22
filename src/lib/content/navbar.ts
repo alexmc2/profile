@@ -1,3 +1,4 @@
+// src/lib/content/navbar.ts
 import { NavbarSectionType } from '@/lib/types/sections';
 // import { resumeFileName } from '@/lib/utils/config';
 

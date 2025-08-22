@@ -1,3 +1,4 @@
+// src/containers/Projects.tsx
 'use client';
 import { projectsSection } from '@/lib/content/projects';
 import { PROJECTS_INITIALLY } from '@/lib/utils/config';

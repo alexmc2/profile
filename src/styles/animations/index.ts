@@ -1,3 +1,4 @@
+// src/styles/animations/index.ts
 import { Direction } from '@/lib/types';
 
 import { Variants } from 'framer-motion';

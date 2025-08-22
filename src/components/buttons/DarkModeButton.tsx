@@ -1,3 +1,4 @@
+// src/components/buttons/DarkModeButton.tsx
 'use client';
 import { useTheme } from '@/lib/hooks/use-theme';
 

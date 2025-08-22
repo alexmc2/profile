@@ -1,3 +1,4 @@
+// src/containers/Social/SocialLinks.tsx
 import { socialSection } from '@/lib/content/social';
 
 import { SocialIcon } from '../../../src/components';

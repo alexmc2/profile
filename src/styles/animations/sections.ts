@@ -1,3 +1,4 @@
+// src/styles/animations/sections.ts
 import { slideUp } from '.';
 import { Variants } from 'framer-motion';
 

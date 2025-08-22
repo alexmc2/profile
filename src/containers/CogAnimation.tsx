@@ -1,3 +1,4 @@
+// src/containers/CogAnimation.tsx
 'use client';
 import { motion } from 'framer-motion';
 import { DynamicShowLottie } from '../components/dynamic/Dynamic';

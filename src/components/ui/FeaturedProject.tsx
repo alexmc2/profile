@@ -1,3 +1,4 @@
+// src/components/ui/FeaturedProject.tsx
 import { FeaturedProjectType } from '@/lib/types';
 import { blurImageURL } from '@/lib/utils/config';
 import { cn } from '@/lib/utils/helper';

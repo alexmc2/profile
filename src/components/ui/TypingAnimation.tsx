@@ -1,3 +1,4 @@
+// src/components/ui/TypingAnimation.tsx
 'use client';
 7;
 import { motion } from 'framer-motion';

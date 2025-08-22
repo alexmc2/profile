@@ -1,3 +1,4 @@
+// src/containers/index.ts
 export { default as About } from './About';
 export { default as CogAnimation } from './CogAnimation';
 export { default as Contact } from './Contact';

@@ -1,3 +1,4 @@
+// src/lib/types/sections.ts
 import {
   // CTAType,
   ExperienceType,

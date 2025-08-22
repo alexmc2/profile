@@ -1,3 +1,4 @@
+// src/containers/Skills.tsx
 'use client';
 import { skillsSection } from '@/lib/content/skills';
 import { useTheme } from '@/lib/hooks/use-theme';

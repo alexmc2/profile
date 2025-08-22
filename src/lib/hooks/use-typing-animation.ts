@@ -1,3 +1,4 @@
+// src/lib/hooks/use-typing-animation.ts
 import { useEffect, useState } from 'react';
 
 interface UseTypingAnimationProps {
